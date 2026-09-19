@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Canlı Sinyaller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <h1>Canlı Sinyaller</h1>
+        <div id="monitorStatus" class="muted">Monitor hazırlanıyor…</div>
+      </div>
+      <button id="tracking" class="toggle on" aria-label="Takip aç/kapat"><span></span></button>
+    </header>
+
+    <section class="summary">
+      <div class="sum"><b id="signalCount">0</b><span>Bildirimler</span></div>
+      <div class="sum"><b id="candidateCount">0</b><span>Kural 2 adayı</span></div>
+      <div class="sum"><b id="matchCount">0</b><span>Canlı maç</span></div>
+    </section>
+
+    <section class="tabs">
+      <button class="tab active" data-tab="stats" id="statsTab">İstatistikler (0)</button>
+      <button class="tab" data-tab="signals" id="signalsTab">Bildirimler (0)</button>
+    </section>
+
+    <button id="allMode" class="all-mode">Tüm Maçlar Modu: Kapalı</button>
+    <div id="modeHelp" class="mode-help">Takipli takımlar · tüm kurallar</div>
+
+    <section class="scanbox">
+      <div class="scanrow"><b>Canlı isabetli şut taraması</b><span id="scanState">Hazır</span></div>
+      <div class="muted">Mobil foreground monitor çalışır. İstatistik bulunamazsa 25 saniyede sıradaki maça geçer.</div>
+      <button id="scanNow" class="secondary">Şimdi tümünü tara</button>
+    </section>
+
+    <section id="statsView" class="view"></section>
+    <section id="signalsView" class="view hidden"></section>
+
+    <button id="openFlashscore" class="footer-btn">Flashscore'u aç</button>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

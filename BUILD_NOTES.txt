@@ -1,0 +1,9 @@
+v0.4.0
+
+UI touch controls fix:
+- WebView clickable/focusable
+- touchend + click fallback
+- 450 ms duplicate-event debounce
+- optimistic tracking/all-matches UI state
+- direct Java bridge service commands
+- v0.3 separate monitor process preserved
